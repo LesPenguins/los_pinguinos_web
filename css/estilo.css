@@ -1,97 +1,77 @@
-.sidebar {
-    font-family: 'Trebuchet MS';
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
+/* Cuerpo principal de la página */
+* {
+    box-sizing: border-box;
   }
   
-  /* links */
-  .sidebar a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #020202;
   }
   
-  /* link actual */
-  .sidebar a.active {
-    background-color: #36AA54;
-    color: white;
+  /* Estilo de la cabecera */
+  .header {
+    background-color: #383838;
+    padding: 10px;
+    font-size: 10px;
   }
   
-  /* Links al mouse-over */
-  .sidebar a:hover:not(.active) {
-    background-color: #005015;
-    color: white;
+  /* Crea dos columnas una al lado de la otra */
+  .column {
+    float: left;
+    padding: 10px;
   }
   
-  /* contenido de la página */
-  div.content {
-    background-size: 100%;
-    background-image: url(../img/fondo-difuso.png);
-    margin-left: 200px;
-    padding: 1px 16px;
-    height: 1000px;
-  }
-  p{
-    font-family: 'Trebuchet MS';
-  }
-  h1{
-    font-family: 'Trebuchet MS';
-  }
-  h2{
-    font-family: 'Trebuchet MS';
+  /* Columna con el menú de navegación */
+  .column.side {
+    margin-bottom: 100%;
+    background-color: #505050;
+    width: 25%;
+    padding: 10px;
   }
 
+  /* Estilo de la certelera de películas */
+  .films{
+    color: #FFFFFF;
+  }
+  td, tr{
+    font-size: 120%;
+    text-align: center;
+    width: 40px;
+    border: solid;
+    border-color: #FFFFFF;
+  }
+  /* Estilo de las fotos de la cartelera */
+  .films img{
+    max-width: 300px;
+  }
+
+  /* Estilo del Footer */
+  .footer {
+    background-color: #383838;
+    padding: 10px;
+    text-align: center;
+  }
   
-  /*Elementos alineados a al dcha*/
-.img-derecha{
-  background-color: #E3B448;
-  float: right;
-  border-radius: 5px;
-  padding: 5px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  margin-top: 30px;
-  width: 300px;
-}
-/*Elementos alineados a al izqda*/
-.img-izquierda{
-  background-color: #E3B448;
-  float: left;
-  border-radius: 5px;
-  padding: 5px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  margin-top: 30px;
-  width: 300px;
-}
-
-
-/*RESPONSIVE COSAS NOSEQUE*/
-
-
-  /* para tablets */
-  @media screen and (max-width: 700px) {
-    .sidebar {
+  /* Hace que las columas se pongan una encima de otra cuando el ancho de la pagina es inferior a 600 px */
+  @media (max-width: 600px) {
+    .column.side, .films {
       width: 100%;
-      height: auto;
-      position: relative;
+      margin-bottom: 0%;
     }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
   }
-  
-  /* para móviles */
-  @media screen and (max-width: 400px) {
-    .sidebar a {
-      text-align: center;
-      float: none;
-    }
+
+  /* Estilo de los enlaces */
+  a{
+    color: #FFFFFF;
+    list-style: none;
+    text-decoration: none;
+    padding: 2px;
+    border-radius: 7px;
+  }
+  a:hover {
+    background-color: #807F7F;
+  }
+  li{
+    list-style: none;
+    padding: 3px;
   }
